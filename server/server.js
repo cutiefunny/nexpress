@@ -44,6 +44,12 @@ nextApp
       return handle(req, res);
     });
 
+    //post 요청
+    app.post('/topic', (req, res) => {
+      console.log(JSON.stringify(req.body));
+      res.send('success');
+    });
+
     app.listen(port, () => {
       console.log(`Express server listen port:${port}`);
       console.log(`http://localhost:${port}`);
